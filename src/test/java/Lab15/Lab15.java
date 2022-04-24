@@ -28,7 +28,12 @@ public class Lab15 {
 
             // Scroll down to display all elements
             TouchAction scrollDown = new TouchAction(driver);
-            scrollDown.press(PointOption.point(10, 300)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1))).moveTo(PointOption.point(10, 100)).release().perform();
+            scrollDown.press(PointOption.point(10, 300))
+                .waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                .moveTo(PointOption.point(10, 100))
+                .release()
+                .perform();
+            
             // Get elements
             MobileElement usernameElem = driver.findElement(MobileBy.AccessibilityId("input-email"));
             MobileElement passwordElem = driver.findElement(MobileBy.AccessibilityId("input-password"));
